@@ -38,7 +38,13 @@ def largest_factor(n):
     >>> largest_factor(13) # factor is 1 since 13 is prime
     1
     """
-    "*** YOUR CODE HERE ***"
+    factor, nxt = 0, 1
+    while (nxt  < n):
+        if n % nxt == 0:
+            factor = nxt
+        nxt = nxt + 1
+    return factor
+       
 
 def if_function(condition, true_result, false_result):
     """Return true_result if condition is a true value, and
